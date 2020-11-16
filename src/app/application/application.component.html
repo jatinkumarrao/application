@@ -1,0 +1,38 @@
+   <ng-template #infoText>
+<p>Please Select a Recipe</p>
+</ng-template>
+   <div *ngIf="recipe ; else infoText">
+   
+ <div   fxLayout="row wrap" fxLayoutGap="16px grid">
+   <div *ngFor="let recipe of recipe " >
+<div *ngIf="view=='true'">
+<p>hello</p></div>
+<div>
+   <mat-card class = "tp-card">
+   <mat-card-actions>
+   
+<div  >
+<div class="fish"></div>
+<img class="apple" [src]="recipe.imagePath" alt="airplane">
+<div class="shadow"></div>
+</div>
+      <button mat-button (click)="toggle()">LIKE</button>
+      <button mat-button>SHARE</button>
+   </mat-card-actions>
+  
+   <mat-card-header >
+      <div mat-card-image class ="tp-header-image">
+      <mat-card-title> {{recipe.name}}</mat-card-title>
+      <mat-card-subtitle>HTML Basics</mat-card-subtitle>
+      </div>
+   </mat-card-header>
+</mat-card>
+   </div>
+    </div>
+    </div>
+    </div>
+ <div style="position: relative; left: 0; top: 0;">
+    <img src="/assets/download.jfif" class="fishes"/>
+    <img src="/assets/mountains.jpg" class="fish"/>
+  <div class="bottom-left">Bottom Left</div>
+  </div>
